@@ -23,8 +23,8 @@ export default function Sidebar() {
         <div className="hoverEffect flex my-10 p-2 mt-2.5 items-center">
             <Image className="rounded-full h-10 w-10" src={ProfilePic} height={100} alt="profile-picture"/>
             <div className="leading-5 ml-2 hidden xl:inline">
-                <body className="font-bold">NK</body>
-                <body>@Kalpizzy7</body>
+                <h1 className="font-bold">NK</h1>
+                <h1>@Kalpizzy7</h1>
             </div>
             <EllipsisHorizontalIcon className="h-5 ml-auto hidden xl:inline" />
         </div>

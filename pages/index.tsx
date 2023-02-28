@@ -1,5 +1,6 @@
 
 import Sidebar from '@/components/app-bar/Sidebar'
+import MainFeed from '@/components/feed/MainFeed'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -13,8 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className='flex min-h-screen max-w-7xl mx-auto'>
         <Sidebar/>
+        <MainFeed />
       </main>
     </>
   )
