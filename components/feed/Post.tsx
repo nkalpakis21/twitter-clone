@@ -1,3 +1,4 @@
+import { ChartBarIcon, ChatBubbleLeftIcon, HeartIcon, ShareIcon, TrashIcon } from "@heroicons/react/24/outline"
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/solid"
 import Image from "next/image"
 
@@ -28,6 +29,13 @@ export default function Post({post}: IProps) {
                 </div>
                 <div>
                     <Image className=" rounded-md" src={post.img} alt="post-image" width={300} height={200}/>
+                </div>
+                <div className="flex justify-between mt-1">
+                    <ChatBubbleLeftIcon  className="h-9 w-8 p-2 hoverEffect hover:bg-sky-100 hover:text-sky-500"/>
+                    <TrashIcon className="h-9 w-8 p-2 hoverEffect hover:bg-red-200 hover:text-red-600"/>
+                    <HeartIcon  className="h-9 w-8 p-2 hoverEffect hover:bg-red-200 hover:text-red-600"/>
+                    <ShareIcon  className="h-9 w-8 p-2 hoverEffect hover:bg-sky-100 hover:text-sky-500"/>
+                    <ChartBarIcon  className="h-9 w-8 p-2 hoverEffect hover:bg-sky-100 hover:text-sky-500"/>
                 </div>
             </div>
 
