@@ -15,7 +15,7 @@ export default function Post({post}: IProps) {
                 <div className="mb-2">
                     <div className="flex items-center">
                         <div className="flex space-x-1">
-                            <h1 className="font-bold">{post.name}</h1>
+                            <h1 className="font-bold hover:underline">{post.name}</h1>
                             <span className=" text-gray-500 ">@{post.username} &#8226;</span>
                             <span className=" text-gray-500 ">{post.timestamp}</span>
                         </div>
