@@ -4,9 +4,9 @@ import { useState } from 'react'
 import ProfilePic from '../../public/profile_picture.jpeg'
 export default function Input () {
     const [tweetText, setTweetText] = useState('');
-    console.log(tweetText);
+
     return (
-        <div className="flex w-full space-x-4 p-4">
+        <div className="flex w-full space-x-4 p-3 border-b border-gray-200">
             <div>
                 <Image src={ProfilePic} alt="profile-pic" height={60} width={60} className="rounded-full" />
             </div>
