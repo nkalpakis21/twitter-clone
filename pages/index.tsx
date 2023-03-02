@@ -6,9 +6,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 
-export default function Home({newsResults}: any) {
+export default function Home({newsResults, whoToFollow}: any) {
 
-  console.log(newsResults)
+
   return (
     <>
       <Head>
@@ -20,20 +20,23 @@ export default function Home({newsResults}: any) {
       <main className='flex min-h-screen mx-auto'>
         <Sidebar/>
         <MainFeed />
-        <Widgets articles={newsResults.articles} />
+        <Widgets articles={newsResults.articles} whoToFollow={whoToFollow.results} />
       </main>
     </>
   )
 }
 
-//https://saurav.tech/NewsAPI/top-headlines/category/business/us.json
 export async function getServerSideProps() {
   const newsResults = await fetch('https://saurav.tech/NewsAPI/top-headlines/category/business/us.json')
     .then(result => result.json());
 
+  const whoToFollow = await fetch('https://randomuser.me/api/?results=50')
+    .then(result => result.json());
+
   return {
     props: {
-      newsResults
+      newsResults,
+      whoToFollow,
     }
   }
 }
