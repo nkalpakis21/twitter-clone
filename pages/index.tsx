@@ -1,6 +1,7 @@
 
 import Sidebar from '@/components/app-bar/Sidebar'
 import MainFeed from '@/components/feed/MainFeed'
+import Widgets from '@/components/widget/widgets'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <main className='flex min-h-screen max-w-7xl mx-auto'>
         <Sidebar/>
         <MainFeed />
+        <Widgets />
       </main>
     </>
   )
