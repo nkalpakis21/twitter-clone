@@ -14,10 +14,10 @@ export default function Post({post}: IProps) {
             <div className="w-full">
                 <div className="mb-2">
                     <div className="flex items-center">
-                        <div className="flex space-x-1">
-                            <h1 className="font-bold hover:underline">{post.name}</h1>
-                            <span className=" text-gray-500 ">@{post.username} &#8226;</span>
-                            <span className=" text-gray-500 ">{post.timestamp}</span>
+                        <div className="flex space-x-1 mb-1 items-center">
+                            <h1 className="font-bold hover:underline text-md">{post.name}</h1>
+                            <span className=" text-gray-500 text-[12px] md:text-sm">@{post.username} &#8226;</span>
+                            <span className=" text-gray-500 text-[12px] md:text-sm">{post.timestamp}</span>
                         </div>
                         <div className="ml-auto hoverEffect">
                             <EllipsisHorizontalIcon className="h-8 p-1"/>
@@ -27,8 +27,8 @@ export default function Post({post}: IProps) {
                         <h1>{post.text}</h1>
                     </div>
                 </div>
-                <div>
-                    <Image className=" rounded-md" src={post.img} alt="post-image" width={300} height={200}/>
+                <div className="relative h-[300px] w-full">
+                    <Image className=" rounded-md" src={post.img} alt="post-image" fill/>
                 </div>
                 <div className="flex justify-between mt-1">
                     <ChatBubbleLeftIcon  className="h-9 w-8 p-2 hoverEffect hover:bg-sky-100 hover:text-sky-500"/>
