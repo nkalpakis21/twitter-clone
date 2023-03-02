@@ -6,7 +6,7 @@ import {BellIcon, BookmarkIcon, ClipboardIcon, EllipsisHorizontalIcon, HomeIcon,
 import ProfilePic from "../../public/profile_picture.jpeg"
 export default function Sidebar() {
   return (
-    <div className="min-h-screen flex flex-col justify-between p-2 m-3 fixed">
+    <div className="min-h-screen flex flex-col justify-between p-2 m-3 fixed xl:ml-24">
         <div>
             <Image className="hoverEffect p-0 hover:bg-blue-100 xl-px-1 mb-4" height="50" width="50" alt="twitter-logo" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"/>
             <SidebarItem title="Home" Icon={HomeIcon} active/>
